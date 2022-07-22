@@ -49,17 +49,20 @@ Neste projeto, foi desenvolvido uma API em Nodejs Express, utilizando banco de d
         * `MYSQL_PASSWORD=suasenha`
         
 
-4. Inicializando a API:
+5. Inicializando a API:
   - `npm run restore` para criar o banco de dados, tabelas, associações e povar com alguns dados.
   - `npm start` ou `npm run debug`
 
-5. Abra o navegador e acesse a rota:
-  1. GET `http://localhost:3001/clientes`
-    * Deverá exibir os clientes cadastrados
-
-  2. Siga para rota POST /cliente e cadastre um usuário.
-  `http://localhost:3001/cliente` 
-  `body: { "nome": "Ferreira", "documento": "1234567869" }`
+6. Abra o navegador e acesse a rota:
+  * GET `http://localhost:3001/clientes`
+  
+   - Deverá exibir os clientes cadastrados
+ 
+  * Siga para rota POST /cliente e cadastre um usuário.
+  
+    - POST `http://localhost:3001/cliente` 
+   
+    - `body: { "nome": "Ferreira", "documento": "1234567869" }`
 
   3. Rotas disponíveis:
   - GET `http://localhost:3001/cliente`
@@ -69,3 +72,8 @@ Neste projeto, foi desenvolvido uma API em Nodejs Express, utilizando banco de d
   - PUT `http://localhost:3001/cliente/1`
   - DELETE `http://localhost:3001/cliente/1`
 
+## Executando os testes
+
+ - Para apenas execução dos testes: `npm test`
+
+ - Para execução dos testes mais relatório de cobertura: `num run test:coverage`
