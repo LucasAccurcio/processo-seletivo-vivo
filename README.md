@@ -77,3 +77,12 @@ Neste projeto, foi desenvolvido uma API em Nodejs Express, utilizando banco de d
  - Para apenas execução dos testes: `npm test`
 
  - Para execução dos testes mais relatório de cobertura: `num run test:coverage`
+
+ ## Implementações futuras
+  - Implementar mais validações para rota /cliente como quantidade de caracteres para nome e documento.
+  - Implementar uma chave JWT para deixar a API mais segura contra inclusão / exclusão e alteração de dados por usuários não permitidos.
+  - Na rota /cliente/:id/info adicionar ao retorno da API, além dos dados do cliente e documento, também os dados da linha telefônica pertencentes a aquele cliente.
+  - Desenvolver a rota /endereco para cadastrado de enderenço associado a um cliente.
+  - Desenvolver testes para rota /endereco
+  - Desenvolver a rota /linha para cadastro de uma linha telefonica e associá-la a um cliente.
+  - Desenvolver testes para rota /cliente
