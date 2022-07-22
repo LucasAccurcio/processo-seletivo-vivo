@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Enderecos.associate = (models) => {
     Enderecos.belongsTo(
-      models.Cliente,
+      models.Clientes,
       { foreingKey: 'clienteId', as: 'cliente' },
     );
   };

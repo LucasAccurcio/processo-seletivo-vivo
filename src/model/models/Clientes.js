@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   Clientes.associate = (models) => {
     Clientes.hasOne(
       models.Enderecos,
-      { foreignKey: 'id', as: 'linhaTelefonica' },
+      { foreignKey: 'id', as: 'endereco' },
     );
   };
 

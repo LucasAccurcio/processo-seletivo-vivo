@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
   LinhaTelefonicas.associate = (models) => {
     LinhaTelefonicas.belongsTo(
-      models.Cliente,
+      models.Clientes,
       { foreignKey: 'clienteId', as: 'cliente' },
     );
   };
