@@ -11,10 +11,12 @@ Neste projeto, foi desenvolvido uma API em Nodejs Express, utilizando banco de d
 
 ### Metodologia ágil:
 - Criação do Trello como suporte para gerenciamento das tarefas a serem executadas.
+![Trello](/images/trello.png)
 
 ### Pensamento e criação de entidades:
 - Utilização do `https://excalidraw.com/` para desenhar as entidades e relacionamento.
-
+![Excalidraw](/images/excalidraw.png)
+![Diagrama](/images/diagrama.png)
 
 ## Executando aplicação
 
