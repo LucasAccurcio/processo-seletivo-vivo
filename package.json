@@ -4,7 +4,15 @@
   "description": "Case para o Processo Seletivo Vivo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
+    "start": "node index.js",
+    "drop": "npx sequelize-cli db:drop $",
+    "seed": "npx sequelize-cli db:seed:all $",
+    "test": "mocha tests/unit/*.js --exit",
+    "test:coverage": "nyc --all --include models --include services --include controllers mocha tests/unit/*.js --exit",
+    "debug": "nodemon index.js",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "restore": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "Lucas-Accurcio",
@@ -19,6 +27,9 @@
   },
   "devDependencies": {
     "chai": "^4.3.6",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
     "sinon": "^14.0.0"
