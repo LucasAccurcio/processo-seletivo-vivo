@@ -58,13 +58,14 @@ Neste projeto, foi desenvolvido uma API em Nodejs Express, utilizando banco de d
     * Deverá exibir os clientes cadastrados
 
   2. Siga para rota POST /cliente e cadastre um usuário.
-
+  `http://localhost:3001/cliente` 
   `body: { "nome": "Ferreira", "documento": "1234567869" }`
 
   3. Rotas disponíveis:
-  - GET `http://localhost:3001/clientes`
-  - GET `http://localhost:3001/clientes/1`
-  - GET `http://localhost:3001/clientes/1/info`
-  - PUT `http://localhost:3001/clientes/1`
-  - DELETE `http://localhost:3001/clientes/1`
+  - GET `http://localhost:3001/cliente`
+  - GET `http://localhost:3001/cliente/1`
+  - GET `http://localhost:3001/cliente/1/info`
+  - POST `http://localhost:3001/cliente`
+  - PUT `http://localhost:3001/cliente/1`
+  - DELETE `http://localhost:3001/cliente/1`
 
