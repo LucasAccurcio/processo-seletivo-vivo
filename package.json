@@ -2,15 +2,15 @@
   "name": "case-vivo",
   "version": "1.0.0",
   "description": "Case para o Processo Seletivo Vivo",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
-    "start": "node index.js",
+    "start": "node .",
     "drop": "npx sequelize-cli db:drop $",
     "seed": "npx sequelize-cli db:seed:all $",
-    "test": "mocha tests/unit/*.js --exit",
-    "test:coverage": "nyc --all --include models --include services --include controllers mocha tests/unit/*.js --exit",
-    "debug": "nodemon index.js",
+    "test": "mocha src/tests/unit/*.js --exit",
+    "test:coverage": "nyc --all mocha src/tests/unit/*.js --exit",
+    "debug": "nodemon .",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json .",
     "restore": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
@@ -21,17 +21,20 @@
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "joi": "^17.6.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3",
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "eslint": "^8.20.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
+    "nyc": "^15.1.0",
     "sinon": "^14.0.0"
   }
 }
